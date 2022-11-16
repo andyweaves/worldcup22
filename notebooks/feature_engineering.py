@@ -3,11 +3,16 @@
 
 # COMMAND ----------
 
+dbutils.widgets.text(name="username", defaultValue="", label="username")
+username = dbutils.widgets.get("username")
+
+# COMMAND ----------
+
 import pandas as pd
 import bamboolib as bam
 
 bam
-pdf = pd.read_csv("/Workspace/Repos/andrew.weaver@databricks.com/worldcup22/resources/international_matches.csv", parse_dates=["date"])
+pdf = pd.read_csv(f"/Workspace/Repos/{username}/worldcup22/resources/international_matches.csv", parse_dates=["date"])
 pdf
 
 # COMMAND ----------
