@@ -1,9 +1,13 @@
 # Databricks notebook source
 dbutils.widgets.text(name="model_url", defaultValue="", label="model_url")
 dbutils.widgets.text(name="username", defaultValue="", label="username")
+dbutils.widgets.text(name="pat_secret_scope", defaultValue="", label="pat_secret_scope")
+dbutils.widgets.text(name="pat_secret_key", defaultValue="", label="pat_secret_key")
 
 username = dbutils.widgets.get("username")
 model_url = dbutils.widgets.get("model_url")
+pat_secret_scope = dbutils.widgets.get("pat_secret_scope")
+pat_secret_key = dbutils.widgets.get("pat_secret_key")
 
 # COMMAND ----------
 
@@ -22,7 +26,7 @@ import requests
 
 def score_model(model_url, data):
   
-  databricks_token = dbutils.notebook.entry_point.getDbutils().notebook().getContext().apiToken().get()
+  databricks_token = dbutils.secrets.get(scope=pat_secret_scope, key=pat_secret_key)
   
   headers = {
     "Authorization": f"Bearer {databricks_token}",
