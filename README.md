@@ -42,6 +42,10 @@ Once the AutoML Evaluation is showing as complete you can now deploy your model!
 
 All being well, after a few minutes you should see something like this:
 
+![image](https://user-images.githubusercontent.com/43955924/202475115-aa6d1aa1-b705-4434-a284-6bb6cd418156.png)
+
+Your model is now ready for serverless real-time inference!
+
 ### Model Inference
 
 In order to use your model to predict the results of upcoming fixtures, you're going to need some data. I've provided some [sample inference data](resources/group_b.json) to predict the outcome of matches in Group B but you could also create your own for the matches that you want to predict. I used the following sources to gather the data required:
