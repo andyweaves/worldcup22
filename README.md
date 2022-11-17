@@ -42,7 +42,7 @@ Once the AutoML Evaluation is showing as complete you can now deploy your model!
 
 All being well, after a few minutes you should see something like this:
 
-![image](https://user-images.githubusercontent.com/43955924/202475115-aa6d1aa1-b705-4434-a284-6bb6cd418156.png)
+![image](https://user-images.githubusercontent.com/43955924/202475365-1126e9d0-b731-480a-8d82-b8d294a09762.png)
 
 Your model is now ready for serverless real-time inference!
 
