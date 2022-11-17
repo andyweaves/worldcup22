@@ -35,8 +35,31 @@ In order to use your model to predict the results of upcoming fixtures, you're g
 
 * [fifa.com](https://www.fifa.com/fifa-world-ranking) to get the latest world rankings and fifa points
 * [Fifa Index](https://www.fifaindex.com/) to get the latest FIFA 23 player stats
-* For the form and the goal related features you could either use the latest values for each team from the training data, update them manually based on the most recent fixtures or (this is what I did) start with a clean slate and have everyone going into the tournament with 0s for calendar form, goals for, goals against etc. The reason I chose this route is that in many ways the world cup is a clean slate, and just because you've been amazing in friendlies played in your local region, doesn't mean that form is representative of the teams you're going to face in the world cup. As such, for the [sample inference data](resources/group_b.json) I started out with all teams having form and goal related values of 0. After the first round of predictions, I fed the results into the second. So if you won the first game you had a form of 3 and a goals for of 2 for the second. You get the idea.
+* For the form and the goal related features you could either use the latest values for each team from the training data, update them manually based on the most recent fixtures or (this is what I did) start with a clean slate and have everyone going into the tournament with 0s for calendar form, goals for, goals against etc. The reason I chose this route is that in many ways the world cup is a clean slate, and just because you've been amazing in friendlies played in your local region, doesn't mean that form is representative of the teams you're going to face in the world cup. As such, for the [sample inference data](resources/group_b.json) I started out with all teams having form and goal related values of 0. After the first round of predictions, I fed the results into the second. So if you won the first game you had a form of 3 and a goals for of 2 for the second. You get the idea, lets get predicting...
+
+1. Highlight and copy the [sample inference data](resources/group_b.json)
+2. Switch to Databricks [Machine Learning](https://www.databricks.com/product/machine-learning) / Models
+3. Find the model that you deployed above
+4. Select Serving (Preview)
+5. Under Call the model find the Request text box and paste the data copied above
+6. Select Send Request
+
+All being well, you should see something like this:
+
+You can also navigate to the [inference notebook](notebooks/inference.py) in your checked out repo, enter the model URL and your Databricks username (again used the locate the [sample inference data](resources/group_b.json)) in the widgets provided and run the notebook
+
+As you can see, for Group B we're predicting the following outcomes:
+
+* England v IR Iran: England Win
+* USA v Wales: USA Win
+* Wales v IR Iran: Wales Win
+* England v USA: England Win
+* IR Iran v USA: USA Win
+* Wales v England: England Win
+
+Based on the above, the final table for Group B should look something like:
 
 
+Here's hoping! :crossed_fingers:
 
-Or you can navigate to the [inference notebook](notebooks/inference.py) in your checked out repo, enter the model URL and your Databricks username (again used the locate the [sample inference data](resources/group_b.json)) in the widgets provided and run the notebook
+
