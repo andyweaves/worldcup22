@@ -63,7 +63,7 @@ In order to use your model to predict the results of upcoming fixtures, you're g
 
 All being well, you should see something like this:
 
-You can also navigate to the [inference notebook](notebooks/inference.py) in your checked out repo, enter the model URL and your Databricks username (again used the locate the [sample inference data](resources/group_b.json)) in the widgets provided and run the notebook
+You can also navigate to the [inference notebook](notebooks/inference.py) in your checked out repo, enter the model URL and your Databricks username (again used to locate the [sample inference data](resources/group_b.json)) in the widgets provided and run the notebook
 
 As you can see, for Group B we're predicting the following outcomes:
 
