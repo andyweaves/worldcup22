@@ -25,6 +25,18 @@ All being well, you should see something like this:
 
 Select Start AutoML to begin training your model!
 
+### Model Deployment
+
+
+
 ### Model Inference
 
+In order to use your model to predict the results of upcoming fixtures, you're going to need some data. I've provided some [sample inference data](resources/group_b.json) to predict the outcome of matches in Group B but you could also create your own for the matches that you want to predict. I used the following sources to gather the data required:
 
+* [fifa.com](https://www.fifa.com/fifa-world-ranking) to get the latest world rankings and fifa points
+* [Fifa Index](https://www.fifaindex.com/) to get the latest FIFA 23 player stats
+* For the form and the goal related features you could either use the latest values for each team from the training data, update them manually based on the most recent fixtures or (this is what I did) start with a clean slate and have everyone going into the tournament with 0s for calendar form, goals for, goals against etc. The reason I chose this route is that in many ways the world cup is a clean slate, and just because you've been amazing in friendlies played in your local region, doesn't mean that form is representative of the teams you're going to face in the world cup. As such, for the [sample inference data](resources/group_b.json) I started out with all teams having form and goal related values of 0. After the first round of predictions, I fed the results into the second. So if you won the first game you had a form of 3 and a goals for of 2 for the second. You get the idea.
+
+
+
+Or you can navigate to the [inference notebook](notebooks/inference.py) in your checked out repo, enter the model URL and your Databricks username (again used the locate the [sample inference data](resources/group_b.json)) in the widgets provided and run the notebook
