@@ -50,16 +50,21 @@ You can also navigate to the [inference notebook](notebooks/inference.py) in you
 
 As you can see, for Group B we're predicting the following outcomes:
 
-* England v IR Iran: England Win
-* USA v Wales: USA Win
-* Wales v IR Iran: Wales Win
-* England v USA: England Win
-* IR Iran v USA: USA Win
-* Wales v England: England Win
+* England v IR Iran: **England Win**
+* USA v Wales: **USA Win**
+* Wales v IR Iran: **Wales Win**
+* England v USA: **England Win**
+* IR Iran v USA: **USA Win**
+* Wales v England: **England Win**
 
-Based on the above, the final table for Group B should look something like:
+Based on the above, the final table for Group B should look something like this:
 
+
+| Team        | Points      |
+| ----------- | ----------- |
+| England     | 9           |
+| USA         | 6           |
+| Wales       | 3           |
+| Iran        | 0           |
 
 Here's hoping! :crossed_fingers:
-
-
