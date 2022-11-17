@@ -27,7 +27,20 @@ Select Start AutoML to begin training your model!
 
 ### Model Deployment
 
+Once the AutoML Evaluation is showing as complete you can now deploy your model!
 
+1. The experiment runs (there should be about ~300 of them) will automatically be ordered by ```val_f1_score``` so the best model based on that metric should be first in the list
+2. Select the best model and then under Artifacts select Register Model
+3. Select Create New Model and then enter a model name
+4. Select Register
+5. Where the Register Model button was you should now see a link to your model. Select that link
+6. You should be taken to the page for Version 1 of your model
+7. Select Stage: and then select Transition to -> Staging
+8. Select Ok
+9. Now at the top, next to Registered Models you should be able to go to the registered model
+10. Select Serving (Preview) and then Enable Serverless Real-Time Inference
+
+All being well, after a few minutes you should see something like this:
 
 ### Model Inference
 
